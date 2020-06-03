@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}All posts{% endblock %}
+
+{% block body %}
+ <h1> My Blog</h1>
+{% if post %}
+    <div>
+        <h2> {{ post.title }}</h2>
+        <p>{{ post.author.firstname }} {{ post.author.lastname }}</p>
+        <p>{{ post.content }}</p>
+    </div>
+{% else %}
+    Aucun article trouvé.
+{% endif %}
+
+<a href="{{ path('post_list') }}">
+    Retour à l'accueil
+</a>
+
+{% endblock %}
