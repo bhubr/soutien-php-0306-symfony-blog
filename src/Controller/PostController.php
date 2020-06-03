@@ -6,10 +6,10 @@ use App\Entity\Post;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
-class HomeController extends AbstractController
+class PostController extends AbstractController
 {
     /**
-     * @Route("/", name="home")
+     * @Route("/", name="post_list")
      */
     public function index()
     {
